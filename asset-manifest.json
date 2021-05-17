@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/CounterTimer/static/css/main.645335ed.chunk.css",
+    "main.js": "/CounterTimer/static/js/main.2f615159.chunk.js",
+    "main.js.map": "/CounterTimer/static/js/main.2f615159.chunk.js.map",
+    "runtime-main.js": "/CounterTimer/static/js/runtime-main.0cfa605b.js",
+    "runtime-main.js.map": "/CounterTimer/static/js/runtime-main.0cfa605b.js.map",
+    "static/css/2.fe359a49.chunk.css": "/CounterTimer/static/css/2.fe359a49.chunk.css",
+    "static/js/2.e35bec70.chunk.js": "/CounterTimer/static/js/2.e35bec70.chunk.js",
+    "static/js/2.e35bec70.chunk.js.map": "/CounterTimer/static/js/2.e35bec70.chunk.js.map",
+    "static/js/3.3c18b19d.chunk.js": "/CounterTimer/static/js/3.3c18b19d.chunk.js",
+    "static/js/3.3c18b19d.chunk.js.map": "/CounterTimer/static/js/3.3c18b19d.chunk.js.map",
+    "index.html": "/CounterTimer/index.html",
+    "static/css/2.fe359a49.chunk.css.map": "/CounterTimer/static/css/2.fe359a49.chunk.css.map",
+    "static/css/main.645335ed.chunk.css.map": "/CounterTimer/static/css/main.645335ed.chunk.css.map",
+    "static/js/2.e35bec70.chunk.js.LICENSE.txt": "/CounterTimer/static/js/2.e35bec70.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0cfa605b.js",
+    "static/css/2.fe359a49.chunk.css",
+    "static/js/2.e35bec70.chunk.js",
+    "static/css/main.645335ed.chunk.css",
+    "static/js/main.2f615159.chunk.js"
+  ]
+}
