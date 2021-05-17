@@ -1,6 +1,6 @@
 {
   "name": "myapp",
-  "homepage": "https://kirangps.github.io/TimerCreator",
+  "homepage": "https://kirangps.github.io/CounterTimer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
