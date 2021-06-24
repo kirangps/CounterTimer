@@ -1,15 +1,13 @@
 import React,{Component} from 'react';
 import tachyons from "tachyons";
 //import "./index.css"
-import Particles from 'react-particles-js';
+//import Particles from 'react-particles-js';
 import "./App.css"
 
  
 
 class App extends Component{
-  x;
-  date= new Date()
-  constructor(){
+   constructor(){
     super()
     this.state={
       searchFiled:"",
@@ -17,14 +15,14 @@ class App extends Component{
       hours: 0,
       minutes: 0, 
       seconds: 0,
-      ResetClick: false
-    }
+      message:'',
+      }
   }
   
 
   onChange=(e)=>{
     //console.log(e.target.value)
-    this.setState({searchFiled: e.target.value,field:""})
+    this.setState({searchFiled: e.target.value})
   }
 
  
@@ -33,6 +31,12 @@ class App extends Component{
       var now = new Date().getTime();
       if(this.state.searchFiled!=""){
         var countTime=new Date(this.state.searchFiled).getTime()
+        if(countTime<now){
+          this.setState({message :"Please enter the valid date of timer!!!! "})
+          return;
+       }
+       this.setState({message:''})
+      
         var distance=countTime-now;
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -42,60 +46,22 @@ class App extends Component{
         //document.getElementById("timer").innerHTML=`${hours}Hours ${minutes}Minutes ${seconds}Seconds`
         this.setState({days:days,hours:hours,minutes:minutes,seconds:seconds})
         console.log(`Timer Ends in this time period :- ${days}Days ${hours}Hours ${minutes}Minutes ${seconds}Seconds`)
-        if (distance < 0) {
-         // clearInterval(x);
-          document.getElementById("demo").innerHTML = "EXPIRED";
-        }
-        }
-
-      }
-     ,1000)
-
-  Reset=()=>{
-    this.setState({
-      searchFiled:"",
-      days: 0,
-      hours: 0,
-      minutes: 0, 
-      seconds: 0,
-      ResetClick: true
-    })
-    if(this.state.ResetClick){
-      clearInterval(this.x);
-    }
-}
-particlesEffect ={
- 
-  
-    number :{
-      value: 10,
-      density:{
-        enable:true,
-        value_area:50
-
-        
-      }
-    }
-  
-}
+     }
+      } ,1000)
 
   render(){
     return(
       <div className="tc modify">
-               
-               <Particles params={this.particlesEffect} className="particles"/> 
-              <h1>{`Current Time in INDIA ${this.date}`}</h1>
+       <h1>{`Current Time in INDIA ${this.date}`}</h1>
       <h4>Please Enter the date on which the Timer Ends !!!</h4>
-      <input className="pa2 bg-light-green" type="datetime-local"  placeholder="Enter date in MM-DD-YEAR Formate" onChange={this.onChange}/>
+      <input className="pa2 bg-light-green" type="datetime-local" onChange={this.onChange}/>
+      {this.state.message=='' ?null : <h2>{this.state.message}</h2>}  
         {this.state.searchFiled==""? <h2>Remaining Time Period :- 0Days 0Hours 0Minutes 0Seconds</h2> : <h2>{`Remaining Time Period :- ${this.state.days}Days ${this.state.hours}Hours ${this.state.minutes}Minutes ${this.state.seconds}Seconds`}</h2>}
-        <span> </span>
+          
       </div>
     )
     
   }
 
   }
-
-
-
 export default App;
