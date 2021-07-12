@@ -55,7 +55,7 @@ class App extends Component{
     return(
       
       <div className="tc modify">
-        <h2>Im kiran</h2>
+        
        <h1>{`Current Time in INDIA ${this.date}`}</h1>
       <h4>Please Enter the date on which the Timer Ends !!!</h4>
       <input className="pa2 bg-light-green" type="datetime-local" onChange={this.onChange}/>
